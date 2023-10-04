@@ -1,0 +1,41 @@
+repos:
+- hooks:
+  - id: check-shebang-scripts-are-executable
+  - id: check-merge-conflict
+  - id: check-toml
+  - id: check-yaml
+  repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+- hooks:
+  - additional_dependencies:
+    - types-aiofiles
+    - types-pyOpenSSL
+    - types-ujson
+    - types-requests
+    - pydantic
+    id: mypy
+    name: typecheck
+  repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.5.1
+- hooks:
+  - id: autoflake
+    name: remove unused imports
+  repo: https://github.com/PyCQA/autoflake
+  rev: v2.2.1
+- hooks:
+  - id: isort
+    name: sort imports
+  repo: https://github.com/pycqa/isort
+  rev: 5.12.0
+- hooks:
+  - id: black
+    name: format
+  repo: https://github.com/psf/black
+  rev: 23.9.1
+- hooks:
+  - id: commitizen
+  - id: commitizen-branch
+    stages:
+    - push
+  repo: https://github.com/commitizen-tools/commitizen
+  rev: 3.10.0

@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "big data jupyter book"
+version = "0.1.0"
+description = "Big Data Jupyter Book for learning big data tools"
+authors = ["Mario Alberto Ramirez  <marm1984@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+black = "^23.9.1"
+flake8 = "^6.1.0"
+flake8-annotations = "^3.0.1"
+pytest = "^7.4.2"
+pre-commit = "^3.4.0"
+commitizen = "^3.10.0"
+flake8-bugbear = "^23.9.16"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
