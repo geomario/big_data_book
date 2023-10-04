@@ -32,10 +32,3 @@ repos:
         name: format
     repo: https://github.com/psf/black
     rev: 23.9.1
-  - hooks:
-      - id: commitizen
-        # - id: commitizen-branch
-        stages:
-          - push
-    repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.10.0
